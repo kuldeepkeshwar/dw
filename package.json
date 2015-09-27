@@ -1,5 +1,5 @@
 {
-  "name": "dw",
+  "name": "@kuldeepkeshwar/dw",
   "version": "1.0.1",
   "description": "Downloader in nodejs",
   "dependencies": {
