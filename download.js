@@ -6,19 +6,30 @@ var puid = new Puid();
 var path = require('path');
 var Promise = require('bluebird');
 
-
 var msg_received='received %s bytes';
 var msg_process='progress: %s % ';
 var msg_total='total size %s bytes';
 
 var download = function(file, folder, callback){
     var p = new Promise(function(resolve, reject){
-        var id = puid.generate();
-        var dest = path.join(folder, id);
-        var writeStream = fs.createWriteStream(dest);
+        var id ;
+        var extname=path.extname(file);    
+        if(extname){
+            id=path.basename(file);
+        }else{
+           id = puid.generate();
+        }
+        var dest = path.join(folder,id);
+        if(fs.existsSync(dest)){
+            id=path.basename(file).replace(extname,'')+'-'+puid.generate()+extname;
+            dest = path.join(folder,id);
+        }
 
+        
+        // start the downloading and file writing
+        var writeStream = fs.createWriteStream(dest);
         writeStream.on('finish', function(){
-            resolve(id);
+            resolve(id);   
         });
         writeStream.on('error', function(err){
             fs.unlink(dest, reject.bind(null, err));
@@ -36,9 +47,6 @@ var download = function(file, folder, callback){
             fs.unlink(dest, reject.bind(null, err));
         })
         .pipe(writeStream)
-        // .on('close', function (err) {
-        //     console.log('100% ....');
-        // })
     });
     if(!callback)
         return p;
