@@ -1,0 +1,24 @@
+{
+  "name": "dw",
+  "version": "1.0.1",
+  "description": "Downloader in nodejs",
+  "dependencies": {
+    "bluebird": "^2.9.34",
+    "mkdirp": "^0.5.1",
+    "puid": "^1.0.5",
+    "request": "^2.61.0",
+    "request-progress": "^0.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "downloader in nodejs"
+  ],
+  "bin": {
+    "dw": "dw.js"
+  },
+  "author": "kuldeepkeshwar",
+  "license": "MIT"
+}
