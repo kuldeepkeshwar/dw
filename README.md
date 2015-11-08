@@ -1,4 +1,6 @@
 # dw 
+[![Build Status](https://travis-ci.org/kuldeepkeshwar/dw.svg)](https://travis-ci.org/kuldeepkeshwar/dw)
+[![Dependency Status](https://gemnasium.com/kuldeepkeshwar/dw.svg)](https://gemnasium.com/kuldeepkeshwar/dw)
 ## downloader in nodejs
 
 This plugin can be used to download any stuff
