@@ -3,11 +3,11 @@
   "version": "1.0.2",
   "description": "Downloader in nodejs",
   "dependencies": {
-    "bluebird": "^2.9.34",
-    "mkdirp": "^0.5.1",
-    "puid": "^1.0.5",
-    "request": "^2.61.0",
-    "request-progress": "^0.3.1"
+    "bluebird": "latest",
+    "mkdirp": "latest",
+    "puid": "latest",
+    "request": "latest",
+    "request-progress": "latest"
   },
   "devDependencies": {},
   "scripts": {
