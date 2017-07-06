@@ -1,4 +1,6 @@
 # dw 
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/node-libs/dw.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/node-libs/dw.svg)](https://travis-ci.org/node-libs/dw)
 [![Dependency Status](https://gemnasium.com/node-libs/dw.svg)](https://gemnasium.com/node-libs/dw)
 ## downloader in nodejs
